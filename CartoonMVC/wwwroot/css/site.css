@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.monsterImgTumbNail {
+  height: 100px;
+  width: auto;
+          
+}

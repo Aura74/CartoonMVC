@@ -15,39 +15,39 @@
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
+            @*            <th>
                 @Html.DisplayNameFor(model => model.Age)
-            </th>
-            <th>
+                </th>*@
+            @*            <th>
                 @Html.DisplayNameFor(model => model.IQ)
-            </th>
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.SeenLastTime)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Element)
             </th>
-            <th>
+            @*            <th>
                 @Html.DisplayNameFor(model => model.Warning)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.Weaknesses)
-            </th>
-            <th>
+                </th>*@
+            @*            <th>
                 @Html.DisplayNameFor(model => model.Strength)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.Speed)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.Naughtiness)
-            </th>
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.DegreeOfDanger)
             </th>
-            <th>
+            @*            <th>
                 @Html.DisplayNameFor(model => model.Information)
-            </th>
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
@@ -55,53 +55,60 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IQ)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SeenLastTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Element)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Warning)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weaknesses)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Strength)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Speed)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Naughtiness)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DegreeOfDanger)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Information)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.ImageUrl)*@
+
+                    <img class="monsterImgTumbNail" src="@Html.DisplayFor(modelItem => item.ImageUrl)" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                @*            <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.IQ)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeenLastTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Element)
+                </td>
+                @*            <td>
+                    @Html.DisplayFor(modelItem => item.Warning)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Weaknesses)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Strength)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Speed)
+                    </td>*@
+                @*            <td>
+                    @Html.DisplayFor(modelItem => item.Naughtiness)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.DegreeOfDanger)
+                </td>
+
+                @*            <td>
+                    @Html.DisplayFor(modelItem => item.Information)
+                    </td>*@
+              
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+
+            </tr>
+        }
     </tbody>
 </table>
