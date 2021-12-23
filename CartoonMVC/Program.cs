@@ -1,4 +1,10 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CartoonMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CartoonMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CartoonMVCContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
