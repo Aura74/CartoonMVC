@@ -1,106 +1,20 @@
 ﻿@model CartoonMVC.Models.Monster
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Ta Bort";
 }
-
 <h1 class="monsterFont">@Html.DisplayFor(model => model.Name)</h1>
 <h3 class="monsterFont">- Vill du verkligen ta bort @Html.DisplayFor(model => model.Name)</h3>
-
-<hr/>
-@*<h3>Are you sure you want to delete this?</h3>*@
+<hr />
 <div>
-@*    <h4>Monster</h4>
-    <hr />*@
-@*    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>*@
-@*        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IQ)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IQ)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SeenLastTime)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SeenLastTime)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Element)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Element)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Warning)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Warning)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Weaknesses)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Weaknesses)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Strength)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Strength)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Speed)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Speed)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naughtiness)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naughtiness)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DegreeOfDanger)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DegreeOfDanger)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Information)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Information)
-        </dd>*@
-        
-
-@*        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>*@
-        <dd class = "col-sm-10">
-@*            @Html.DisplayFor(model => model.ImageUrl)*@
-            <div class="flex-shrink-0 mindre">
-                <img class="img-thumbnail" src="@Html.DisplayFor(model => model.ImageUrl)" />
-            </div>
-        </dd>
-@*    </dl>*@
-    
+    <dd class="col-sm-10">
+        <div class="flex-shrink-0 mindre">
+            <img class="img-thumbnail" src="@Html.DisplayFor(model => model.ImageUrl)" />
+        </div>
+    </dd>
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Ja för fan" class="btn btn-danger" />
-        <a asp-action="Index" class="btn btn-success">Nej aldrig - Jag vill behålla mitt monster</a>
+        <input type="submit" value="❌ Ja för fan - Ta bort skiten❌" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-success">❕ Nej aldrig - Jag vill behålla mitt monster ❕</a>
     </form>
 </div>

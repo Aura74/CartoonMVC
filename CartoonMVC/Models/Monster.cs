@@ -56,6 +56,5 @@ namespace CartoonMVC.Models
         
         [Display(Name = "Bild")]
         public string? ImageUrl { get; set; }
-        
     }
 }

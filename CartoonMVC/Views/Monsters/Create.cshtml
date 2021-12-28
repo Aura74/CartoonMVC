@@ -1,12 +1,11 @@
 ﻿@model CartoonMVC.Models.Monster
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Skapa Nytt";
 }
 <div id="notFlex" class="createContainer">
-    <h1 class="createH1">Skapa nytt Monster</h1>
+    <h1 class="monsterFont">Skapa nytt Monster</h1>
 
-@*    <h4 class="createH2">Monster</h4>*@
     <hr />
     <div class="row">
         <div class="col-md-4 createInput" >
@@ -68,13 +67,10 @@
                     <span asp-validation-for="DegreeOfDanger" class="text-danger"></span>
                 </div>
                 
-
                 <div class="form-group">
                     <label asp-for="Information" class="control-label forNamnIndex"></label>
                     <textarea asp-for="Information" class="form-control summernote"></textarea>
                     <span asp-validation-for="Information" class="text-danger"></span>
-                    
-             
                 </div>
                 
                 <div class="form-group">
@@ -90,10 +86,4 @@
             </form>
         </div>
     </div>
-
-@*        <a asp-action="Index">Back to List</a>*@
-    </div>
-
-
-
-
+</div>
