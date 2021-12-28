@@ -21,9 +21,46 @@ namespace CartoonMVC.Controllers
         }
 
         // GET: Monsters
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string monsterElement, string searchString)
         {
-            return View(await _context.Monster.ToListAsync());
+           // var monsters = from m in _context.Monster select m;
+
+            //if (!String.IsNullOrEmpty(searchString))
+            //{
+            //    monsters = monsters.Where(s => s.Name!.Contains(searchString));
+            //}
+
+            //return View(await monsters.ToListAsync());
+
+            ////return View(await _context.Monster.ToListAsync());
+
+
+
+
+            // Use LINQ to get list of genres.
+            IQueryable<string> elementQuery = from m in _context.Monster
+                orderby m.Element
+                select m.Element;
+
+            var monsters = from m in _context.Monster select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                monsters = monsters.Where(s => s.Name!.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(monsterElement))
+            {
+                monsters = monsters.Where(x => x.Element == monsterElement);
+            }
+
+            var monsterElementVM = new MonsterElementViewModel()
+            {
+                Elements = new SelectList(await elementQuery.Distinct().ToListAsync()),
+                Monsters = await monsters.ToListAsync()
+            };
+
+            return View(monsterElementVM);
         }
 
         // GET: Monsters/Details/5

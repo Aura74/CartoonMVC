@@ -4,20 +4,22 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<h1 class="monsterFont">@Html.DisplayFor(model => model.Name)</h1>
+<h3 class="monsterFont">- Vill du verkligen ta bort @Html.DisplayFor(model => model.Name)</h3>
 
-<h3>Are you sure you want to delete this?</h3>
+<hr/>
+@*<h3>Are you sure you want to delete this?</h3>*@
 <div>
-    <h4>Monster</h4>
-    <hr />
-    <dl class="row">
+@*    <h4>Monster</h4>
+    <hr />*@
+@*    <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
+        </dd>*@
+@*        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Age)
         </dt>
         <dd class = "col-sm-10">
@@ -82,18 +84,23 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Information)
-        </dd>
-        <dt class = "col-sm-2">
+        </dd>*@
+        
+
+@*        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
+        </dt>*@
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageUrl)
+@*            @Html.DisplayFor(model => model.ImageUrl)*@
+            <div class="flex-shrink-0 mindre">
+                <img class="img-thumbnail" src="@Html.DisplayFor(model => model.ImageUrl)" />
+            </div>
         </dd>
-    </dl>
+@*    </dl>*@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Ja för fan" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-success">Nej aldrig - Jag vill behålla mitt monster</a>
     </form>
 </div>

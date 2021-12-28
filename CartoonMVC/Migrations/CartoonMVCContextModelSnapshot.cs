@@ -38,7 +38,8 @@ namespace CartoonMVC.Migrations
 
                     b.Property<string>("Element")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("IQ")
                         .HasColumnType("int");
@@ -51,7 +52,8 @@ namespace CartoonMVC.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Naughtiness")
                         .HasColumnType("int");
@@ -66,7 +68,6 @@ namespace CartoonMVC.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Warning")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Weaknesses")

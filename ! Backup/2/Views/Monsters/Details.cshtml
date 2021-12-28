@@ -1,0 +1,256 @@
+﻿@model CartoonMVC.Models.Monster
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Monster</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IQ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IQ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeenLastTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeenLastTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Element)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Element)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Warning)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Warning)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Weaknesses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Weaknesses)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+        <dd class = "col-sm-10">
+           @* @Html.DisplayFor(model => model.Strength)*@
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Strength)%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+
+        <dd class="col-sm-10">
+           
+            @*@Html.DisplayFor(model => model.Speed)*@
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Speed)%" aria-valuemin="0" aria-valuemax="10"></div>
+            </div>
+        </dd>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naughtiness)
+        </dt>
+        <dd class = "col-sm-10">
+            @*@Html.DisplayFor(model => model.Naughtiness)*@
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Naughtiness)%"  aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>
+        
+@*        @*Farlighet*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DegreeOfDanger)
+        </dt>
+        <dd class = "col-sm-10">
+            @*@Html.DisplayFor(model => model.DegreeOfDanger)*@
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.DegreeOfDanger)%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>*@
+        
+
+@*        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+        <dd class="monsterImg" class = "col-sm-10">
+@*            @Html.DisplayFor(model => model.ImageUrl)*@
+            <img class="monsterImg" src="@Html.DisplayFor(model => model.ImageUrl)" />
+        </dd>*@
+    </dl>
+</div>
+@*<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+    <div class="container">
+        <div class="ima5g">
+            <dd class="monsterImg" class = "col-sm-10">
+                @*            @Html.DisplayFor(model => model.ImageUrl)*@
+                <img class="monsterImg" src="@Html.DisplayFor(model => model.ImageUrl)" />
+            </dd>
+        </div>
+        <div class="text-container">
+            <span></span>
+            <h1>@Html.DisplayFor(model => model.Name)  </h1>
+            <p>Monstret @Html.DisplayFor(model => model.Name) sågs senast @Html.DisplayFor(model => model.SeenLastTime), @Html.DisplayFor(model => model.Information)
+            </p>
+            
+            <div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IQ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IQ)
+        </dd>
+@*        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeenLastTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeenLastTime)
+        </dd>*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Element)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Element)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Warning)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Warning)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Weaknesses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Weaknesses)
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+        <dd class = "col-sm-9">
+           @* @Html.DisplayFor(model => model.Strength)*@
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Strength)%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+
+        <dd class="col-sm-9">
+           
+            @*@Html.DisplayFor(model => model.Speed)*@
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Speed)%" aria-valuemin="0" aria-valuemax="10"></div>
+            </div>
+        </dd>
+
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Naughtiness)
+        </dt>
+        <dd class = "col-sm-9">
+            @*@Html.DisplayFor(model => model.Naughtiness)*@
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.Naughtiness)%"  aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>
+        
+        @*Farlighet*@
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.DegreeOfDanger)
+        </dt>
+        <dd class = "col-sm-9">
+            @*@Html.DisplayFor(model => model.DegreeOfDanger)*@
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" style="width: @Html.DisplayFor(model => model.DegreeOfDanger)%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </dd>
+        
+
+@*        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Information)
+        </dd>*@
+        
+    </dl>
+</div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>|
+                <a asp-action="Index"> Back to List</a>
+            </div>
+            @*<a href="https://webdevtrick.com" target="_blank">Visit Webdevtrick</a>*@
+        </div>
+    </div>
+</div>

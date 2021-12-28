@@ -4,90 +4,93 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="monsterFont">Gör monstret ännu farligare</h1>
 
-<h4>Monster</h4>
+@*<h4>Monster</h4>*@
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label forNamnIndex"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
+                <label asp-for="Age" class="control-label forNamnIndex"></label>
                 <input asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IQ" class="control-label"></label>
+                <label asp-for="IQ" class="control-label forNamnIndex"></label>
                 <input asp-for="IQ" class="form-control" />
                 <span asp-validation-for="IQ" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SeenLastTime" class="control-label"></label>
+                <label asp-for="SeenLastTime" class="control-label forNamnIndex"></label>
                 <input asp-for="SeenLastTime" class="form-control" />
                 <span asp-validation-for="SeenLastTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Element" class="control-label"></label>
+                <label asp-for="Element" class="control-label forNamnIndex"></label>
                 <input asp-for="Element" class="form-control" />
                 <span asp-validation-for="Element" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Warning" class="control-label"></label>
+                <label asp-for="Warning" class="control-label forNamnIndex"></label>
                 <input asp-for="Warning" class="form-control" />
                 <span asp-validation-for="Warning" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Weaknesses" class="control-label"></label>
+                <label asp-for="Weaknesses" class="control-label forNamnIndex"></label>
                 <input asp-for="Weaknesses" class="form-control" />
                 <span asp-validation-for="Weaknesses" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Strength" class="control-label"></label>
+                <label asp-for="Strength" class="control-label forNamnIndex"></label>
                 <input asp-for="Strength" class="form-control" />
                 <span asp-validation-for="Strength" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Speed" class="control-label"></label>
+                <label asp-for="Speed" class="control-label forNamnIndex"></label>
                 <input asp-for="Speed" class="form-control" />
                 <span asp-validation-for="Speed" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Naughtiness" class="control-label"></label>
+                <label asp-for="Naughtiness" class="control-label forNamnIndex"></label>
                 <input asp-for="Naughtiness" class="form-control" />
                 <span asp-validation-for="Naughtiness" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DegreeOfDanger" class="control-label"></label>
+                <label asp-for="DegreeOfDanger" class="control-label forNamnIndex"></label>
                 <input asp-for="DegreeOfDanger" class="form-control" />
                 <span asp-validation-for="DegreeOfDanger" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Information" class="control-label"></label>
-                <input asp-for="Information" class="form-control" />
+                <label asp-for="Information" class="control-label forNamnIndex"></label>
+                <textarea asp-for="Information" class="form-control" ></textarea>
                 <span asp-validation-for="Information" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
+                <label asp-for="ImageUrl" class="control-label forNamnIndex"></label>
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
+            <hr/>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-success">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
+@*<div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div>*@
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

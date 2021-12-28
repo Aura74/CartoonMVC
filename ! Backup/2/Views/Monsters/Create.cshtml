@@ -1,0 +1,110 @@
+﻿@model CartoonMVC.Models.Monster
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="createContainer">
+    <h1 class="createH1">Skapa nytt</h1>
+
+    <h4 class="createH2">Monster</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4 createInput" >
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group createInputBox">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IQ" class="control-label"></label>
+                    <input asp-for="IQ" class="form-control" />
+                    <span asp-validation-for="IQ" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeenLastTime" class="control-label"></label>
+                    <input asp-for="SeenLastTime" class="form-control" />
+                    <span asp-validation-for="SeenLastTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Element" class="control-label"></label>
+                    <input asp-for="Element" class="form-control" />
+                    <span asp-validation-for="Element" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Warning" class="control-label"></label>
+                    <input asp-for="Warning" class="form-control" />
+                    <span asp-validation-for="Warning" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Weaknesses" class="control-label"></label>
+                    <input asp-for="Weaknesses" class="form-control" />
+                    <span asp-validation-for="Weaknesses" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Strength" class="control-label"></label>
+                    <input asp-for="Strength" class="form-control" />
+                    <span asp-validation-for="Strength" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Speed" class="control-label"></label>
+                    <input asp-for="Speed" class="form-control" />
+                    <span asp-validation-for="Speed" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Naughtiness" class="control-label"></label>
+                    <input asp-for="Naughtiness" class="form-control" />
+                    <span asp-validation-for="Naughtiness" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DegreeOfDanger" class="control-label"></label>
+                    <input asp-for="DegreeOfDanger" class="form-control" />
+                    <span asp-validation-for="DegreeOfDanger" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Information" class="control-label"></label>
+                    <input asp-for="Information" class="form-control" />
+                    <span asp-validation-for="Information" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageUrl" class="control-label"></label>
+                    <input asp-for="ImageUrl" class="form-control" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary firebutton" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</div>
+
+
+
+<div class="main">
+    <div class="container">
+        <div class="imag"></div>
+        <div class="text-container">
+            <span></span>
+            <h1>Web Development</h1>
+            <p>Get the lastest and trending web development project's source code, first see preview if you need then get the code.
+            </p>
+            <a href="https://webdevtrick.com" target="_blank">Visit Webdevtrick</a>
+        </div>
+    </div>
+</div>
+
