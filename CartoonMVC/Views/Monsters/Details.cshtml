@@ -15,9 +15,9 @@
         <div class="flex-grow-1 ms-3">
             <h1 class="monsterFont">
                 @Html.DisplayFor(model => model.Name)                  
-                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a>
-                <a asp-action="Index" class="btn btn-success"> Back to List</a> 
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model?.Id">❌ Delete ❌</a>
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Ändra</a>
+                <a asp-action="Index" class="btn btn-success"> Tillbaka</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model?.Id">❌ Ta bort ❌</a>
             </h1>
             <hr />
             <p>
