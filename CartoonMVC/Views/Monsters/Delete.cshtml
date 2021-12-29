@@ -15,6 +15,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="❌ Ja för fan - Ta bort skiten❌" class="btn btn-danger" />
-        <a asp-action="Index" class="btn btn-success">❕ Nej aldrig - Jag vill behålla mitt monster ❕</a>
+        <a asp-action="Index" class="btn btn-success">❕ Nej aldrig - Jag vill behålla @Html.DisplayFor(model => model.Name) ❕</a>
     </form>
 </div>
